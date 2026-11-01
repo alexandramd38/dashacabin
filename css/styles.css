@@ -68,6 +68,17 @@ h1, h2, h3 { line-height: 1.2; color: var(--wood-dark); }
   font-weight: bold;
   color: var(--cream);
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.brand-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 2px;
+  object-fit: cover;
 }
 .brand span { color: var(--accent); }
 
