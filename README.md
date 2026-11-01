@@ -1,64 +1,74 @@
 # Dasha Cabin
 
-Site static pentru cabana de închiriat „Dasha Cabin". HTML/CSS simplu cu puțin JavaScript vanilla — fără build step.
+Site premium pentru închirierea cabanei Dasha Cabin — Next.js (export static), TypeScript, Tailwind CSS, Framer Motion, bilingv RO/EN.
+
+## Tehnologii
+
+- **Next.js 15** cu `output: "export"` → site 100% static în `out/`
+- **TypeScript**, **Tailwind CSS**, **Framer Motion**
+- Două limbi: `/ro/` (implicit) și `/en/`
+- SEO: metadate per limbă, JSON-LD `VacationRental`, `sitemap.xml`, `robots.txt`, Open Graph, canonical + hreflang
 
 ## Rulare locală
 
-- Dă dublu-click pe `index.html`, sau
-- Servește folderul:
-
 ```bash
-python3 -m http.server 8000
-# deschide http://localhost:8000
+npm install
+npm run dev        # http://localhost:3000
 ```
 
-## Structura site-ului
+Build + preview static (exact ce ajunge pe hosting):
 
-- `index.html` — acasă (hero, repere, apel la acțiune)
-- `gallery.html` — grilă de fotografii cu lightbox (click pentru mărire)
-- `amenities.html` — facilități, capacitate, regulile casei
-- `location.html` — indicații rutiere și hartă încorporată
-- `rates.html` — tabel de tarife + loc rezervat pentru booking
-- `contact.html` — formular de contact (Formspree) + fallback mailto
-- `css/styles.css` — stiluri comune pentru toate paginile
-- `images/` — fotografii și favicon
+```bash
+npm run build      # generează out/
+npx serve out      # sau: cd out && python3 -m http.server 8000
+```
 
-## Înlocuirea textelor și pozelor
+## Structura conținutului (editare fără cod)
 
-Tot textul de umplutură este marcat cu `[PLACEHOLDER]` — caută acest șir în repo pentru a găsi tot ce trebuie înlocuit (texte, telefon, email, tarife, indicații, descrieri de poze).
+Tot textul site-ului și datele reale sunt în două fișiere:
 
-Fotografiile sunt în `images/` și sunt referite prin căi relative (ex. `images/hero.jpg`). Înlocuiește fișierele cu fotografii reale, păstrând aceleași nume, sau actualizează atributele `src`/`data-full`/`alt` din HTML. Păstrează textul `alt` descriptiv pentru accesibilitate.
+- `lib/site.ts` — date factual: nume, domeniu, email, telefon, WhatsApp, link Google Maps, coordonate, localitate, capacitate, **tarifele pe sezoane**, endpoint Formspree.
+- `lib/content.ts` — toate textele în română și engleză (titluri, descrieri, butoane, amenități, pagina Poveste, texte legale).
 
-Pentru a adăuga o poză în galerie, copiază un bloc `<figure>` din `gallery.html` și actualizează căile — lightbox-ul funcționează automat.
+Caută `[PLACEHOLDER]` în ambele fișiere pentru tot ce trebuie completat cu date reale.
 
-## Formularul de contact (Formspree)
+Imaginile sunt în `public/images/`. Înlocuiește fișierele păstrând aceleași nume (sau actualizează căile în `lib/content.ts`).
 
-Formularul trimite la un endpoint de umplutură. Pentru a-l activa:
+## Formularul de rezervare
 
-1. Creează un formular gratuit pe [formspree.io](https://formspree.io) și obține ID-ul formularului.
-2. În `contact.html`, înlocuiește `https://formspree.io/f/YOUR_FORM_ID` cu endpoint-ul tău real.
-3. Linkul `mailto:` de sub formular funcționează ca rezervă — actualizează și adresa de email.
+Pagina **Disponibilitate & Rezervări** are un formular de cerere (fără rezervare instantanee). Opțiuni:
+
+1. **Formspree**: creează un formular pe formspree.io și înlocuiește `https://formspree.io/f/YOUR_FORM_ID` în `lib/site.ts` (`formspree`).
+2. **Mailto fallback**: dacă `formspree` rămâne pe placeholder, formularul deschide un email precompletat către `site.email`.
+3. **WhatsApp**: butonul WhatsApp folosește numărul din `site.whatsapp`.
+
+Slot pentru widget de booking / Stripe Payment Link: pe pagina de rezervări există zona marcată (`{b.futureSlot}` în `app/[lang]/rezervari/page.tsx`).
 
 ## Deploy pe Cloudflare Pages
 
-1. Fă push la repo pe GitHub (deja făcut dacă citești asta pe GitHub).
-2. În Cloudflare: **Workers & Pages → Create → Pages → Connect to Git**, alege `dashacabin`.
-3. Setări de build: **Build command: none**, **Build output directory: `/`**.
-4. Deploy — fiecare push pe `main` redeploy-ează automat.
+1. Pages → Create project → Connect to Git → alege `alexandramd38/dashacabin`
+2. **Build command:** `npm run build`
+3. **Build output directory:** `out`
+4. Deploy. Site-ul se publică la `https://<proiect>.pages.dev` (rădăcina redirecționează spre `/ro/`).
 
-Alternativ: trage folderul pe [Netlify Drop](https://app.netlify.com/drop) pentru un deploy instant.
+Aceleași setări merg și pe Netlify (`build` + `out`).
 
 ## Domeniu propriu
 
-- **Cloudflare Pages:** proiect → **Custom domains → Set up a custom domain**; dacă DNS-ul domeniului e pe Cloudflare, configurarea e automată. Altfel adaugă CNAME-ul indicat la providerul tău de DNS.
-- **Netlify:** **Domain settings → Add custom domain**, apoi îndreaptă DNS-ul spre Netlify.
+După ce cumperi domeniul: adaugă-l în Cloudflare Pages → Custom domains, apoi setează `site.domain` în `lib/site.ts` — canonical, sitemap și OG URLs se regenerează automat.
 
-## Adăugarea rezervărilor / plăților mai târziu
+## Checklist înainte de lansare
 
-`rates.html` conține un loc marcat:
+- [ ] Înlocuiește toate `[PLACEHOLDER]` din `lib/site.ts` și `lib/content.ts` (email, telefon, WhatsApp, domeniu, capacitate, tarife, texte legale)
+- [ ] Fotografii reale în `public/images/` (imaginile actuale sunt generate ilustrativ, nu fotografii ale proprietății)
+- [ ] Endpoint Formspree real
+- [ ] Recenzii reale — secțiunea de testimoniale e goală intenționat (nu inventa recenzii)
+- [ ] Verifică că nu publici adresa exactă fără acord
+- [ ] Test Lighthouse (țintă ≥90) după imaginile finale
 
-```html
-<!-- BOOKING WIDGET / STRIPE PAYMENT LINK GOES HERE -->
-```
+## Informații care încă lipsesc
 
-Pune aici embed-ul unui widget de booking (ex. Lodgify, Smoobu) sau un buton [Stripe Payment Link](https://docs.stripe.com/payment-links) în div-ul `booking-placeholder` — nu sunt necesare alte modificări.
+- Email, telefon, WhatsApp, domeniu real
+- Capacitate reală (camere/băi/oaspeți), reguli casei, taxe
+- Tarife finale și politica de anulare
+- Texte legale reale (GDPR, cookies, termeni)
