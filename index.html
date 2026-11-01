@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dasha Cabin — Cozy Mountain Cabin Rental</title>
+  <meta name="description" content="Dasha Cabin is a cozy cabin rental nestled in the mountains. [PLACEHOLDER] Perfect for weekend getaways, hiking trips, and quiet retreats.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Dasha <span>Cabin</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="amenities.html">Amenities</a>
+        <a href="location.html">Location</a>
+        <a href="rates.html">Rates</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <img src="images/hero.jpg" alt="Dasha Cabin glowing warmly at sunset among pine trees and mountains [PLACEHOLDER photo]">
+      <div class="hero-content">
+        <h1>Dasha Cabin</h1>
+        <p>[PLACEHOLDER] A cozy log cabin retreat in the mountains — quiet forests, starry nights, and a warm fire waiting for you.</p>
+        <a class="btn" href="contact.html">Plan Your Stay</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Welcome to the cabin</h2>
+        <p class="lead">[PLACEHOLDER] Dasha Cabin is a two-bedroom log cabin tucked into a pine forest, about two hours from the city. It sleeps up to six guests and is perfect for families, couples, and small groups looking to unplug.</p>
+        <div class="cards three">
+          <div class="card">
+            <h3>Quiet &amp; secluded</h3>
+            <p>[PLACEHOLDER] Set on a private wooded lot with no neighbors in sight — just trails, birdsong, and mountain air.</p>
+          </div>
+          <div class="card">
+            <h3>Fully equipped</h3>
+            <p>[PLACEHOLDER] Full kitchen, fireplace, Wi-Fi, hot water, and everything you need for a comfortable stay.</p>
+          </div>
+          <div class="card">
+            <h3>Year-round</h3>
+            <p>[PLACEHOLDER] Beautiful in every season — wildflower summers, golden autumns, and snowy winter nights.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tinted">
+      <div class="container" style="text-align:center">
+        <h2>Ready to escape?</h2>
+        <p>[PLACEHOLDER] Send us a message and we'll help you plan your stay.</p>
+        <a class="btn" href="contact.html">Get in Touch</a>
+        <a class="btn secondary" href="gallery.html">See the Gallery</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>&copy; <span id="year">2026</span> Dasha Cabin. All rights reserved.</div>
+      <div>[PLACEHOLDER] contact@dashacabin.example · +1 (555) 000-0000</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    var toggle = document.querySelector('.nav-toggle');
+    toggle.addEventListener('click', function () {
+      var nav = document.getElementById('site-nav');
+      var open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  </script>
+</body>
+</html>

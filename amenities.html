@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amenities — Dasha Cabin</title>
+  <meta name="description" content="Amenities, capacity, and house rules at Dasha Cabin. [PLACEHOLDER]">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Dasha <span>Cabin</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="amenities.html" aria-current="page">Amenities</a>
+        <a href="location.html">Location</a>
+        <a href="rates.html">Rates</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <h1>Amenities</h1>
+        <p class="lead">[PLACEHOLDER] Everything you need for a comfortable stay in the woods.</p>
+        <div class="cards">
+          <div class="card">
+            <h3>Inside</h3>
+            <ul>
+              <li>[PLACEHOLDER] Wood-burning fireplace (firewood provided)</li>
+              <li>[PLACEHOLDER] Full kitchen: stove, oven, fridge, microwave, coffee maker</li>
+              <li>[PLACEHOLDER] Wi-Fi and smart TV</li>
+              <li>[PLACEHOLDER] Washer and dryer</li>
+              <li>[PLACEHOLDER] Board games and a small library</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Outside</h3>
+            <ul>
+              <li>[PLACEHOLDER] Covered porch with rocking chairs</li>
+              <li>[PLACEHOLDER] Fire pit with seating</li>
+              <li>[PLACEHOLDER] Gas BBQ grill</li>
+              <li>[PLACEHOLDER] Private hiking trail access</li>
+              <li>[PLACEHOLDER] Parking for two cars</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tinted">
+      <div class="container">
+        <h2>Capacity</h2>
+        <ul>
+          <li>[PLACEHOLDER] Sleeps up to 6 guests</li>
+          <li>[PLACEHOLDER] 2 bedrooms (1 queen, 2 twins) + sofa bed in the living room</li>
+          <li>[PLACEHOLDER] 1 bathroom</li>
+        </ul>
+
+        <h2>House rules</h2>
+        <ul>
+          <li>[PLACEHOLDER] Check-in after 3 PM, check-out by 11 AM</li>
+          <li>[PLACEHOLDER] No smoking indoors</li>
+          <li>[PLACEHOLDER] Pets welcome with prior approval</li>
+          <li>[PLACEHOLDER] Quiet hours after 10 PM</li>
+          <li>[PLACEHOLDER] No parties or events</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>&copy; <span id="year">2026</span> Dasha Cabin. All rights reserved.</div>
+      <div>[PLACEHOLDER] contact@dashacabin.example · +1 (555) 000-0000</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    var toggle = document.querySelector('.nav-toggle');
+    toggle.addEventListener('click', function () {
+      var nav = document.getElementById('site-nav');
+      var open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  </script>
+</body>
+</html>

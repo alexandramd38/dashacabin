@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rates — Dasha Cabin</title>
+  <meta name="description" content="Nightly and weekly rates for Dasha Cabin. [PLACEHOLDER]">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Dasha <span>Cabin</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="amenities.html">Amenities</a>
+        <a href="location.html">Location</a>
+        <a href="rates.html" aria-current="page">Rates</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <h1>Rates</h1>
+        <p class="lead">[PLACEHOLDER] Rates are per night for the whole cabin and include bedding, towels, and firewood.</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th scope="col">Season</th><th scope="col">Nightly rate</th><th scope="col">Weekly rate</th><th scope="col">Minimum stay</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>[PLACEHOLDER] Spring (Mar–May)</td><td>$150</td><td>$900</td><td>2 nights</td></tr>
+              <tr><td>[PLACEHOLDER] Summer (Jun–Aug)</td><td>$200</td><td>$1,200</td><td>3 nights</td></tr>
+              <tr><td>[PLACEHOLDER] Autumn (Sep–Nov)</td><td>$170</td><td>$1,000</td><td>2 nights</td></tr>
+              <tr><td>[PLACEHOLDER] Winter / Holidays (Dec–Feb)</td><td>$220</td><td>$1,300</td><td>3 nights</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><small>[PLACEHOLDER] A one-time $80 cleaning fee applies per stay. Taxes not included.</small></p>
+      </div>
+    </section>
+
+    <section class="section tinted">
+      <div class="container">
+        <h2>Booking</h2>
+        <div class="booking-placeholder">
+          <!-- BOOKING WIDGET / STRIPE PAYMENT LINK GOES HERE -->
+          <p><strong>[PLACEHOLDER] Online booking coming soon.</strong></p>
+          <p>In the meantime, <a href="contact.html">contact us</a> to check availability and reserve your dates.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div>&copy; <span id="year">2026</span> Dasha Cabin. All rights reserved.</div>
+      <div>[PLACEHOLDER] contact@dashacabin.example · +1 (555) 000-0000</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    var toggle = document.querySelector('.nav-toggle');
+    toggle.addEventListener('click', function () {
+      var nav = document.getElementById('site-nav');
+      var open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  </script>
+</body>
+</html>
