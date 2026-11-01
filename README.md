@@ -1,6 +1,6 @@
-# Cabana Dasha
+# Dasha Cabin
 
-Site static pentru cabana de închiriat „Cabana Dasha". HTML/CSS simplu cu puțin JavaScript vanilla — fără build step.
+Site static pentru cabana de închiriat „Dasha Cabin". HTML/CSS simplu cu puțin JavaScript vanilla — fără build step.
 
 ## Rulare locală
 
