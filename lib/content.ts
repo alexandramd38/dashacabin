@@ -123,8 +123,19 @@ const ro = {
     mapNote: "Locația exactă a proprietății este comunicată după confirmarea rezervării.",
     directionsTitle: "Cum ajungi",
     directions: [
-      "[PLACEHOLDER] De la Cluj-Napoca, ~1h30min spre Măguri-Răcătău.",
-      "[PLACEHOLDER] Indicațiile detaliate sunt trimise după rezervare.",
+      "Din Cluj-Napoca: DJ107M spre Huedin, apoi DJ103R spre comuna Măguri-Răcătău și Măguri — ~1h30min (~60 km).",
+      "Din Huedin / Călata: urmează drumul județean spre Măguri-Răcătău, apoi indicatorii spre Măguri.",
+      "[PLACEHOLDER] Starea drumului pe ultimul tronson (asfaltat/pietruit) și eventuale restricții sezoniere.",
+      "Coordonate GPS: 46.6382, 23.0856 — adresa exactă o primești la confirmarea rezervării.",
+    ],
+    navTitle: "Navigație directă",
+    navGoogle: "Deschide în Google Maps",
+    navWaze: "Deschide în Waze",
+    lastKmTitle: "Ultimii kilometri",
+    lastKm: [
+      "[PLACEHOLDER] Reper 1: de ex. virează după biserica din Măguri.",
+      "[PLACEHOLDER] Reper 2: de ex. urmează drumul de pe partea stângă a pârâului.",
+      "[PLACEHOLDER] Reper 3: de ex. cabana e ultima casă pe dreapta; parcarea la poartă.",
     ],
   },
   booking: {
@@ -310,8 +321,19 @@ const en: typeof ro = {
     mapNote: "The exact property address is shared after the reservation is confirmed.",
     directionsTitle: "Getting here",
     directions: [
-      "[PLACEHOLDER] From Cluj-Napoca, ~1h30min drive to Măguri-Răcătău.",
-      "[PLACEHOLDER] Detailed directions are sent after booking.",
+      "From Cluj-Napoca: DJ107M towards Huedin, then DJ103R to Măguri-Răcătău and Măguri — ~1h30min (~60 km).",
+      "From Huedin / Călata: follow the county road to Măguri-Răcătău, then the signs to Măguri.",
+      "[PLACEHOLDER] Road condition on the last stretch (paved/gravel) and any seasonal restrictions.",
+      "GPS coordinates: 46.6382, 23.0856 — the exact address is sent when your booking is confirmed.",
+    ],
+    navTitle: "Direct navigation",
+    navGoogle: "Open in Google Maps",
+    navWaze: "Open in Waze",
+    lastKmTitle: "The last kilometres",
+    lastKm: [
+      "[PLACEHOLDER] Landmark 1: e.g. turn right after the church in Măguri.",
+      "[PLACEHOLDER] Landmark 2: e.g. keep the creek on your left.",
+      "[PLACEHOLDER] Landmark 3: e.g. the cabin is the last house on the right; parking at the gate.",
     ],
   },
   booking: {

@@ -53,6 +53,21 @@ export default async function ExperiencesPage({ params }: { params: Promise<{ la
             <ul className="mt-5 list-disc space-y-2 pl-5 text-ink/80">
               {e.directions.map((x) => <li key={x}>{x}</li>)}
             </ul>
+            <p className="kicker mt-8">{e.navTitle}</p>
+            <div className="mt-3 flex flex-wrap gap-3">
+              <a href={site.mapsDirUrl} target="_blank" rel="noopener" className="btn-primary">
+                {e.navGoogle}
+              </a>
+              <a href={site.wazeUrl} target="_blank" rel="noopener" className="btn-outline">
+                {e.navWaze}
+              </a>
+            </div>
+            <div className="card mt-8 border-l-2 border-gold/60">
+              <h3 className="text-2xl">{e.lastKmTitle}</h3>
+              <ul className="mt-3 list-disc space-y-1 pl-5 text-sm text-ink/75">
+                {e.lastKm.map((x) => <li key={x}>{x}</li>)}
+              </ul>
+            </div>
           </Reveal>
         </div>
       </section>

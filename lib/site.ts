@@ -9,6 +9,9 @@ export const site = {
   mapsEmbed:
     "https://maps.google.com/maps?q=46.6382295,23.085601&hl=ro&z=14&output=embed",
   coords: { lat: 46.6382295, lng: 23.085601 },
+  mapsDirUrl:
+    "https://www.google.com/maps/dir/?api=1&destination=46.6382295%2C23.085601",
+  wazeUrl: "https://waze.com/ul?ll=46.6382295%2C23.085601&navigate=yes",
   locality: { ro: "Măguri, comuna Măguri-Răcătău, jud. Cluj", en: "Măguri village, Măguri-Răcătău commune, Cluj county" },
   formspree: "https://formspree.io/f/YOUR_FORM_ID", // [PLACEHOLDER]
   capacity: { guests: 4, bedrooms: 1, bathrooms: 1 }, // [PLACEHOLDER] verify
