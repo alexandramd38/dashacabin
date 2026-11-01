@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 html { scroll-behavior: smooth; }
-body { @apply bg-cream text-ink font-sans antialiased; }
-h1, h2, h3, h4 { @apply font-serif text-forest; }
+body { @apply bg-forest-dark text-ink font-sans antialiased; }
+h1, h2, h3, h4 { @apply font-serif text-cream; }
 
 ::selection { @apply bg-gold/40; }
 
@@ -15,12 +15,12 @@ h1, h2, h3, h4 { @apply font-serif text-forest; }
 .btn {
   @apply inline-block rounded-full px-7 py-3 text-sm font-medium tracking-wide transition-colors duration-300;
 }
-.btn-primary { @apply btn bg-gold text-forest-dark hover:bg-[#b8945a]; }
-.btn-outline { @apply btn border border-cream/70 text-cream hover:bg-cream hover:text-forest-dark; }
-.btn-dark { @apply btn bg-forest text-cream hover:bg-forest-light; }
-.card { @apply rounded-2xl bg-white/70 p-6 md:p-8 shadow-sm ring-1 ring-forest/5; }
+.btn-primary { @apply btn bg-gold text-forest-dark hover:bg-[#bfa980]; }
+.btn-outline { @apply btn border border-gold/60 text-cream hover:bg-gold hover:text-forest-dark; }
+.btn-dark { @apply btn bg-gold text-forest-dark hover:bg-[#bfa980]; }
+.card { @apply rounded-2xl bg-forest/70 p-6 md:p-8 shadow-sm ring-1 ring-cream/10; }
 .input {
-  @apply w-full rounded-lg border border-forest/20 bg-white px-4 py-2.5 text-ink placeholder:text-ink/40 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/30;
+  @apply w-full rounded-lg border border-gold/25 bg-forest-dark px-4 py-2.5 text-ink placeholder:text-ink/40 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/30;
 }
 
 @media (prefers-reduced-motion: reduce) {

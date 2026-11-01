@@ -29,9 +29,9 @@ export default async function BookingPage({ params }: { params: Promise<{ lang: 
           <Reveal>
             <h2 className="text-4xl">{b.ratesTitle}</h2>
             <div className="mt-6 overflow-x-auto rounded-2xl shadow-sm ring-1 ring-forest/10">
-              <table className="w-full border-collapse bg-white text-left">
+              <table className="w-full border-collapse bg-forest-dark text-left">
                 <thead>
-                  <tr className="bg-forest text-cream">
+                  <tr className="bg-forest text-cream/90">
                     <th className="px-5 py-3 font-medium">{b.colSeason}</th>
                     <th className="px-5 py-3 font-medium">{b.colNight}</th>
                     <th className="px-5 py-3 font-medium">{b.colWeek}</th>
@@ -40,7 +40,7 @@ export default async function BookingPage({ params }: { params: Promise<{ lang: 
                 </thead>
                 <tbody>
                   {site.rates.map((r) => (
-                    <tr key={r.season.en} className="border-t border-cream-dark">
+                    <tr key={r.season.en} className="border-t border-cream/10">
                       <td className="px-5 py-3">{r.season[lang]}</td>
                       <td className="px-5 py-3">{lei(r.night)}</td>
                       <td className="px-5 py-3">{lei(r.week)}</td>

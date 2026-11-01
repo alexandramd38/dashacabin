@@ -64,7 +64,7 @@ export default function BookingForm({ d }: { d: Dict }) {
           href={`https://wa.me/${site.whatsapp}?text=${subject}`}
           target="_blank"
           rel="noopener"
-          className="btn border border-forest/30 text-forest hover:bg-forest hover:text-cream"
+          className="btn border border-gold/60 text-cream hover:bg-gold hover:text-forest-dark"
         >
           {b.whatsappCta}
         </a>

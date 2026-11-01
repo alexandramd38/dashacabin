@@ -6,18 +6,18 @@ const config: Config = {
     extend: {
       colors: {
         forest: {
-          DEFAULT: "#173B2B",
-          dark: "#0F2A1F",
-          light: "#2C5240",
+          DEFAULT: "#242725", // charcoal
+          dark: "#101211", // near black
+          light: "#3A3D3A",
         },
         cream: {
-          DEFAULT: "#F5F1E8",
-          dark: "#EDE6D6",
+          DEFAULT: "#F2EEE7", // warm ivory
+          dark: "#242725", // charcoal (section alternation)
         },
-        sage: "#8FAE94",
-        gold: "#C9A96A",
-        wood: "#8A6A4A",
-        ink: "#1E2A23",
+        sage: "#A8794E",
+        gold: "#D5C6AE", // champagne
+        wood: "#A8794E",
+        ink: "#F2EEE7", // ivory text on dark bg
       },
       fontFamily: {
         serif: ["var(--font-cormorant)", "Georgia", "serif"],
