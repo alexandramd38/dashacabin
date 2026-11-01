@@ -12,8 +12,11 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
     <>
       {/* Hero */}
       <section className="relative flex min-h-svh items-center justify-center text-center">
-        <img src="/images/hero-cabin.jpg" alt="Dasha Cabin A-frame cabin at sunset among pine trees" className="absolute inset-0 h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-forest-dark/45" />
+        <div className="absolute inset-0 overflow-hidden bg-forest-dark">
+          <img src="/images/hero-cabin.jpg" alt="" aria-hidden="true" className="h-full w-full scale-110 object-cover opacity-40 blur-2xl" />
+        </div>
+        <img src="/images/hero-cabin.jpg" alt="Dasha Cabin A-frame cabin at sunset among pine trees" className="absolute inset-0 mx-auto h-full object-contain" />
+        <div className="absolute inset-0 bg-forest-dark/30" />
         <div className="container-x relative z-10 py-24 text-cream">
           <Reveal>
             <p className="kicker">{d.hero.tagline}</p>
