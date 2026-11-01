@@ -12,7 +12,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
     <>
       {/* Hero */}
       <section className="relative flex min-h-svh items-center justify-center text-center">
-        <img src="/images/hero.jpg" alt="Dasha Cabin A-frame cabin at sunset among pine trees" className="absolute inset-0 h-full w-full object-cover" />
+        <img src="/images/hero-cabin.jpg" alt="Dasha Cabin A-frame cabin at sunset among pine trees" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-forest-dark/45" />
         <div className="container-x relative z-10 py-24 text-cream">
           <Reveal>

@@ -47,7 +47,7 @@ const ro = {
     discoverTitle: "Descoperă cabana",
     discoverText: "[PLACEHOLDER] O cabană A-frame modernă, cu accente scandinave, în mijlocul unei păduri de conifere.",
     discoverCards: [
-      { title: "Exterior", text: "[PLACEHOLDER] Arhitectură A-frame integrată în peisaj, cu terasă privată.", img: "/images/hero.jpg" },
+      { title: "Exterior", text: "[PLACEHOLDER] Arhitectură A-frame integrată în peisaj, cu terasă privată.", img: "/images/hero-cabin.jpg" },
       { title: "Interior", text: "[PLACEHOLDER] Lemn natural, lumină caldă și un living cu vedere spre pădure.", img: "/images/interior-living.jpg" },
       { title: "Împrejurimi", text: "[PLACEHOLDER] Poteci, poieni și cer înstelat, la câțiva pași de ușă.", img: "/images/exterior-trail.jpg" },
     ],
@@ -101,7 +101,7 @@ const ro = {
     title: "Galerie",
     intro: "[PLACEHOLDER] O privire prin cabană și pădurea din jur. Apasă pe orice fotografie pentru a o mări.",
     items: [
-      { img: "/images/hero.jpg", caption: "[PLACEHOLDER] Cabana în lumina apusului" },
+      { img: "/images/hero-cabin.jpg", caption: "[PLACEHOLDER] Cabana în lumina apusului" },
       { img: "/images/interior-living.jpg", caption: "[PLACEHOLDER] Livingul" },
       { img: "/images/interior-bedroom.jpg", caption: "[PLACEHOLDER] Dormitorul" },
       { img: "/images/interior-kitchen.jpg", caption: "[PLACEHOLDER] Bucătăria" },
@@ -117,7 +117,7 @@ const ro = {
       { title: "Drumeții & poteci", text: "[PLACEHOLDER] Trasee prin pădure și poieni cu plecare direct de la cabană.", img: "/images/exterior-trail.jpg" },
       { title: "Lacul Beliș-Fântânele", text: "[PLACEHOLDER] Lacul de acumulare Beliș-Fântânele, pentru plimbări și peisaje.", img: "/images/exterior-porch.jpg" },
       { title: "Nopți înstelate", text: "[PLACEHOLDER] Cer curat de munte — perfect pentru fotografie și foc de tabără.", img: "/images/exterior-night.jpg" },
-      { title: "Iarna în Apuseni", text: "[PLACEHOLDER] Peisaje de iarnă, sanie și liniștea zăpezii.", img: "/images/hero.jpg" },
+      { title: "Iarna în Apuseni", text: "[PLACEHOLDER] Peisaje de iarnă, sanie și liniștea zăpezii.", img: "/images/hero-cabin.jpg" },
     ],
     mapTitle: "Hartă",
     mapNote: "Locația exactă a proprietății este comunicată după confirmarea rezervării.",
@@ -234,7 +234,7 @@ const en: typeof ro = {
     discoverTitle: "Discover the cabin",
     discoverText: "[PLACEHOLDER] A modern A-frame cabin with Scandinavian touches, set in an evergreen forest.",
     discoverCards: [
-      { title: "Exterior", text: "[PLACEHOLDER] A-frame architecture blending into the landscape, with a private deck.", img: "/images/hero.jpg" },
+      { title: "Exterior", text: "[PLACEHOLDER] A-frame architecture blending into the landscape, with a private deck.", img: "/images/hero-cabin.jpg" },
       { title: "Interior", text: "[PLACEHOLDER] Natural wood, warm light and a living room facing the forest.", img: "/images/interior-living.jpg" },
       { title: "Surroundings", text: "[PLACEHOLDER] Trails, clearings and starry skies, steps from the door.", img: "/images/exterior-trail.jpg" },
     ],
@@ -288,7 +288,7 @@ const en: typeof ro = {
     title: "Gallery",
     intro: "[PLACEHOLDER] A look around the cabin and the forest. Click any photo to enlarge.",
     items: [
-      { img: "/images/hero.jpg", caption: "[PLACEHOLDER] The cabin at golden hour" },
+      { img: "/images/hero-cabin.jpg", caption: "[PLACEHOLDER] The cabin at golden hour" },
       { img: "/images/interior-living.jpg", caption: "[PLACEHOLDER] The living room" },
       { img: "/images/interior-bedroom.jpg", caption: "[PLACEHOLDER] The bedroom" },
       { img: "/images/interior-kitchen.jpg", caption: "[PLACEHOLDER] The kitchen" },
@@ -304,7 +304,7 @@ const en: typeof ro = {
       { title: "Hikes & trails", text: "[PLACEHOLDER] Forest trails and meadows starting right at the cabin.", img: "/images/exterior-trail.jpg" },
       { title: "Beliș-Fântânele Lake", text: "[PLACEHOLDER] The Beliș-Fântânele reservoir, for walks and scenery.", img: "/images/exterior-porch.jpg" },
       { title: "Starry nights", text: "[PLACEHOLDER] Clear mountain skies — perfect for astrophotography and campfires.", img: "/images/exterior-night.jpg" },
-      { title: "Winter in Apuseni", text: "[PLACEHOLDER] Snowy landscapes, sledding and the silence of snow.", img: "/images/hero.jpg" },
+      { title: "Winter in Apuseni", text: "[PLACEHOLDER] Snowy landscapes, sledding and the silence of snow.", img: "/images/hero-cabin.jpg" },
     ],
     mapTitle: "Map",
     mapNote: "The exact property address is shared after the reservation is confirmed.",

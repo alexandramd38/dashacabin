@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       siteName: site.name,
       locale: d.locale,
       type: "website",
-      images: [{ url: "/images/hero.jpg", alt: site.name }],
+      images: [{ url: "/images/hero-cabin.jpg", alt: site.name }],
     },
     icons: { icon: "/images/logo.png" },
   };
@@ -59,7 +59,7 @@ export default async function LangLayout({
     },
     geo: { "@type": "GeoCoordinates", latitude: site.coords.lat, longitude: site.coords.lng },
     url: `https://${site.domain}/${lang}/`,
-    image: [`https://${site.domain}/images/hero.jpg`],
+    image: [`https://${site.domain}/images/hero-cabin.jpg`],
     petsAllowed: site.pets,
   };
   return (
